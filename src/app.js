@@ -21,6 +21,13 @@ const transactionRouter  =require("./routes/transaction.routes")
 /**
  * --use routes
  */
+
+//dummy api for checking
+app.get("/",(req,res) =>{
+    res.send("Ledger service is up and run")
+})
+
+
 app.use("/api/auth",authRouter)
 app.use("/api/accounts",accountRouter)
 app.use("/api/transactions",transactionRouter)
